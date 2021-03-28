@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<body id="hello" style="
+    background: linear-gradient(45deg, red, orange, yellow, green, blue, indigo, violet, red) no-repeat center center fixed;">
+<br><br><br><br><br>
+<center>Mertcan was here !</center>
+
+
+<script>
+var a=0,b=0;
+var arry=["red", "orange", "yellow", "green", "blue" ,"indigo","purple","red", "orange", "yellow", "green", "blue" , "indigo", "pırple"];
+
+function myLoop() {         //  create a loop function
+  setTimeout(function() {   //  call a 3s setTimeout when the loop is called
+      document.getElementById("hello").style.background = "linear-gradient("+a+"deg,"+arry[b]+"," +arry[b+1]+","+ arry[b+2]+","+ arry[b+3]+","+arry[b+4]+","+arry[b+5]+","+arry[b+6]+","+arry[b]+","+arry[b+1]+","+ arry[b+2]+","+ arry[b+3]+","+arry[b+4]+","+arry[b+5]+","+arry[b+6]+"," +arry[b]+") no-repeat center center fixed";
+     a++;
+      b++;
+      if (b==7) {
+        b=0;
+      }
+      
+
+    if (a==360) {
+      a=0;
+    }
+
+    
+
+
+     myLoop(); //  ..  setTimeout()
+  }, 110)
+}
+
+myLoop();
+
+</script>
+
+
+
+</body>
+</html>
